@@ -9,7 +9,7 @@ let nowDate = new Date(),
     inputShift=document.querySelector('.inputShift')
     prev = container.getElementsByClassName('prev')[0],
     next = container.getElementsByClassName('next')[0],
-    monthName = ['январь','февраль','март','апрель','май','июнь','июль','август','сентябрь','октябрь','ноябрь','декабрь'],
+    monthName = ['Січень','Лютий','Березень','Квітень','Травень','Червень','Липень','Серпень','Вересень','Жовтень','Листопад','Грудень'],
     startWorkPrev={},
     startWorkNext={},
     shiftsArr={
@@ -50,7 +50,6 @@ function correctDate() {
         let startDate=new Date(2023,8,1)
         let corDays=(nowDate-startDate)/(1000*3600*24)
         obtainNextDate(corDays)
-        console.log('11111',nowDate.getMonth())
     }
 }
 correctDate()
