@@ -38,22 +38,20 @@ let nowDate = new Date(),
 
     
 
-let testDate=new Date()
-let now_Month=testDate.getMonth()
-let now_Year=testDate.getFullYear()
-let correct_Date=new Date(now_Year,now_Month,1)
-let testDate1=new Date(2023,8,1)
 
-let DateCount=Math.floor((correct_Date-testDate1)/(1000*24*3600))
-console.log('DateCount',DateCount)
-obtainNextDate(DateCount)
 
 
 function correctDate() {
-    if(nowDate.getMonth()!=8){
-        let startDate=new Date(2023,8,1)
-        let corDays=(nowDate-startDate)/(1000*3600*24)
-        obtainNextDate(corDays)
+    if(nowDate.getMonth()!=8||nowDate.getFullYear()!=2023){
+        let testDate=new Date()
+        let now_Month=testDate.getMonth()
+        let now_Year=testDate.getFullYear()
+        let correct_Date=new Date(now_Year,now_Month,1)
+        let testDate1=new Date(2023,8,1)
+        
+        let DateCount=Math.floor((correct_Date-testDate1)/(1000*24*3600))
+        console.log('DateCount',DateCount)
+        obtainNextDate(DateCount)
     }
 }
 correctDate()
