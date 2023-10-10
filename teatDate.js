@@ -3,6 +3,7 @@ let nowDate = new Date(),
     nowMonth = nowDate.getMonth(),
     nowYear = nowDate.getFullYear(),
     container = document.getElementById('month-calendar'),
+    hours=document.querySelector('.hours'),
     monthContainer = container.getElementsByClassName('month-name')[0],
     yearContainer = container.getElementsByClassName('year-name')[0],
     daysContainer = container.getElementsByClassName('days')[0],
@@ -158,6 +159,14 @@ function setMonthCalendar(year,month) {
         }
         console.log(workDays)
         console.log(workNights)
+        let DaysHours=workDays.length*12
+        let NightsHoursFact=workNights.length*12
+        let NightsHoursReal=(workNights.length*4)+(workNights.length*8)*1.2
+        hours.innerHTML=`<H3>Денні години --- ${DaysHours}</H3><H3>Нічні години --- ${NightsHoursFact}<H3>Нічні години фактичні --- ${NightsHoursReal}</H3><H1>Сумарні години --- ${DaysHours+NightsHoursReal}</H1>`
+        console.log('DaysHours',DaysHours)
+        console.log('NightsHoursFact',NightsHoursFact)
+        console.log('NightsHoursReal',NightsHoursReal)
+        console.log('HoursFactSumm',(DaysHours+NightsHoursReal))
     };
     
     let monthDays = new Date(year, month + 1, 0).getDate(),
