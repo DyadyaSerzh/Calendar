@@ -8,6 +8,7 @@ let nowDate = new Date(),
     yearContainer = container.getElementsByClassName('year-name')[0],
     daysContainer = container.getElementsByClassName('days')[0],
     inputShift=document.querySelector('.inputShift')
+    inputDates=document.querySelectorAll('.inputDate')
     prev = container.getElementsByClassName('prev')[0],
     next = container.getElementsByClassName('next')[0],
     monthName = ['Січень','Лютий','Березень','Квітень','Травень','Червень','Липень','Серпень','Вересень','Жовтень','Листопад','Грудень'],
@@ -36,9 +37,15 @@ let nowDate = new Date(),
         shift:4
     };
 
+if (localStorage.LocalShift){
+    inputDates.forEach(e=>{
+        if (e.value==localStorage.LocalShift){
+            e.checked=true
+            
+        }
+    })
 
-    
-
+}
 
 
 
@@ -59,8 +66,11 @@ correctDate()
 
 inputShift.addEventListener('change',(e)=>{
     let shift= e.target.value
+    localStorage.LocalShift=shift;
     firstWorkShift = shiftsArr[shift]
     console.log('firstWorkShift====>',firstWorkShift)
+    console.log('shift====>',shift)
+    console.log('shiftLocal====>',localStorage.LocalShift)
     correctDate()
     setMonthCalendar(nowYear,nowMonth);
 })
