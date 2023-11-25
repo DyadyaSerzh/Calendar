@@ -41,6 +41,7 @@ if (localStorage.LocalShift){
     inputDates.forEach(e=>{
         if (e.value==localStorage.LocalShift){
             e.checked=true
+            firstWorkShift = shiftsArr[localStorage.LocalShift]
             
         }
     })
