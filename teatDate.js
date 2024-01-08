@@ -14,27 +14,27 @@ let nowDate = new Date(),
     monthName = ['Січень','Лютий','Березень','Квітень','Травень','Червень','Липень','Серпень','Вересень','Жовтень','Листопад','Грудень'],
     startWorkPrev={},
     startWorkNext={},
-    shiftsArr={
-        A:{
-            day:1,
-            shift:4
-        },    
-        B:{
-            day:1,
-            shift:2
-        },    
-        C:{
-            day:1,
-            shift:3
-        },
-        D:{
-            day:1,
-            shift:1
-        },
-    },
     firstWorkShift={
         day:1,
         shift:4
+    };
+    const shiftsArr={
+        1:{
+            day:1,
+            shift:4
+        },    
+        2:{
+            day:1,
+            shift:2
+        },    
+        3:{
+            day:1,
+            shift:3
+        },
+        4:{
+            day:1,
+            shift:1
+        },
     };
 
 if (localStorage.LocalShift){
@@ -67,10 +67,11 @@ correctDate()
 
 inputShift.addEventListener('change',(e)=>{
     let shift= e.target.value
+    console.log('shift====>',shift)
     localStorage.LocalShift=shift;
     firstWorkShift = shiftsArr[shift]
     console.log('firstWorkShift====>',firstWorkShift)
-    console.log('shift====>',shift)
+    console.log('WorkShiftD====>',shiftsArr[4])
     console.log('shiftLocal====>',localStorage.LocalShift)
     correctDate()
     setMonthCalendar(nowYear,nowMonth);
