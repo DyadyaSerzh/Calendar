@@ -36,6 +36,8 @@ let nowDate = new Date(),
             shift:1
         },
     };
+    const shiftsArr2=[{day:1,shift:4},{day:1,shift:2},{day:1,shift:3},{day:1,shift:1}];
+    console.log('shiftsArr2',shiftsArr2[0].day)
 
 if (localStorage.LocalShift){
     inputDates.forEach(e=>{
@@ -69,7 +71,8 @@ inputShift.addEventListener('change',(e)=>{
     let shift= e.target.value
     console.log('shift====>',shift)
     localStorage.LocalShift=shift;
-    firstWorkShift = shiftsArr[shift]
+    firstWorkShift.day = shiftsArr2[shift-1].day
+    firstWorkShift.shift = shiftsArr2[shift-1].shift
     console.log('firstWorkShift====>',firstWorkShift)
     console.log('WorkShiftD====>',shiftsArr[4])
     console.log('shiftLocal====>',localStorage.LocalShift)
