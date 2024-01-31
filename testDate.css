@@ -120,3 +120,35 @@ span {
     color: #000;
     font-weight: 700;
 }
+.altCal {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+}
+.altCal *{
+    border: 2px solid black;
+    text-align: center;
+    padding: 3px;
+    height: 25px;
+    font-size: small;
+    font-weight: bolder;
+
+}
+.weekend {
+    background-color: #e4d949;
+}
+.shiftA {
+    background-color: #4b6647;
+}
+
+.shiftB {
+    background-color: #473da5;
+}
+.shiftC {
+    background-color: #c09c39;
+}
+.shiftD {
+    background-color: #cc6d41;
+}

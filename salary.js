@@ -15,8 +15,8 @@ getRes.addEventListener('click', ()=>{
     console.log('timeNorm====',timeNorm)
     let salaryOfHour=salary/timeNorm;
     console.log('salaryOfHour',salaryOfHour)
-    let workTime=(dayNorm + (nightNorm*12.6)+dayOvernorm*2+nightOvernorm*12.6*2)
-    console.log('dayNorm+(nightNorm*12.6)',(dayNorm+(nightNorm*12.6)))
+    let workTime=(dayNorm + (nightNorm*12.4)+dayOvernorm*2+nightOvernorm*12.4*2)
+    console.log('dayNorm+(nightNorm*12.4)',(dayNorm+(nightNorm*12.4)))
     console.log('workTime',workTime)
     let res=workTime*salaryOfHour
     console.log('res',res)
