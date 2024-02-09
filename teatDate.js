@@ -110,7 +110,7 @@ function obtainPrevDate(monthDays){
   
 }
 
-function obtainNextDate(DateCount, koof2=0){
+function obtainNextDate(DateCount, koof2=0,monthDaysForAlt=0){
     let koof = DateCount-Math.floor(DateCount/12)*12
     
     console.log('DateCount',DateCount)
@@ -128,7 +128,8 @@ function obtainNextDate(DateCount, koof2=0){
     let monthDays = new Date(nowYear, nowMonth, 0).getDate()
     if(!koof2){koof2=koof}
     else{monthDays=DateCount}
-    console.log('testMMMMMMMMMMMMM',monthDays)
+    // console.log('testMMMMMMMMMMMMM',monthDays)
+    if(monthDaysForAlt!=0){monthDays=monthDaysForAlt}
     createAlternativCalendar(koof2,monthDays)
 }
 // inpuDate.addEventListener("change", setStartDate);
@@ -345,7 +346,7 @@ next.onclick = function () {
     let curYear = curDate.getFullYear(),
         curMonth = curDate.getMonth();
         monthDays=new Date(curYear,curMonth,0).getDate();
-       
+        monthDaysForAlt=new Date(curYear,curMonth+1,0).getDate();
         // --------------------------
         let correct_Date=new Date(curYear,curMonth,1)
         let testDate1=new Date(2023,8,1)
@@ -354,7 +355,7 @@ next.onclick = function () {
         console.log('Count',Count)
         let koof2=Count
         // -------------------------
-        obtainNextDate(monthDays,koof2)
+        obtainNextDate(monthDays,koof2,monthDaysForAlt)
     setMonthCalendar(curYear,curMonth);
 
     // ------------------------------
