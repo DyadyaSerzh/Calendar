@@ -382,6 +382,7 @@ function createAlternativCalendar(koof,monthDays) {
             }
             startDays[shiftIndex]={day,shift} 
         }
+        if(!koof)(startDays=shiftsArr)
        console.log('startDays====',startDays)
     }
     createAltCal(shiftsArr2[0].day,shiftsArr2[0].shift,1)
