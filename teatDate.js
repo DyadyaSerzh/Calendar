@@ -438,8 +438,8 @@ function createAlternativCalendar(koof,monthDays) {
     for (i=1;i<=4;i++){
         console.log('i=====',i)
         for(j=0;j<arrayOfShifts[i].workDays.length;j++){
-            
-            arrayMonthDays[arrayOfShifts[i].workDays[j]]=i
+            let b=arrayOfShifts[i].workDays[j]
+            arrayMonthDays[b]=i
         }
         for(j=0;j<arrayOfShifts[i].workNights.length;j++){
             let b=arrayOfShifts[i].workNights[j]
