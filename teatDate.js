@@ -430,6 +430,7 @@ function createAlternativCalendar(koof,monthDays) {
         console.log('arrayOfShifts====',arrayOfShifts)
     }
     // console.log('arrayOfShifts====',startDays)
+    monthDays=new Date(nowYear,nowMonth+1,0).getDate()
     createWorkShifts2(startDays[1].day,startDays[1].shift,monthDays,1)
     createWorkShifts2(startDays[2].day,startDays[2].shift,monthDays,2)
     createWorkShifts2(startDays[3].day,startDays[3].shift,monthDays,3)
