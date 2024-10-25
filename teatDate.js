@@ -191,14 +191,11 @@ function setMonthCalendar(year,month) {
         }
         console.log(workDays)
         console.log(workNights)
-         let DaysHours=workDays.length*11
-        let NightsHoursFact=workNights.length*11
-        let NightsHoursReal=(workNights.length*4)+(workNights.length*7)*1.2
-        hours.innerHTML=`<H3>Денні години --- ${DaysHours}</H3><H3>Нічні години --- ${NightsHoursFact}<H3>Нічні зміни --- ${workNights.length}</H3><H1>Сумарні години  --- ${DaysHours+NightsHoursFact}</H1>`
+        let DaysHours=workDays.length*11
+        let NightsHours=workNights.length*11
+        let SummOfShifts=(workNights.length)+(workDays.length)
+        hours.innerHTML=`<H3>Денні години --- ${DaysHours}</H3><H3>Нічні зміни --- ${workNights.length}</H3><H1>Сумарні години  --- ${DaysHours+NightsHours}</H1><H1>Всього змін  --- ${SummOfShifts}</H1>`
         console.log('DaysHours',DaysHours)
-        console.log('NightsHoursFact',NightsHoursFact)
-        console.log('NightsHoursReal',NightsHoursReal)
-        console.log('HoursFactSumm',(DaysHours+NightsHoursReal))
     };
     
     let monthDays = new Date(year, month + 1, 0).getDate(),
