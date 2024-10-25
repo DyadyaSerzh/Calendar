@@ -194,7 +194,7 @@ function setMonthCalendar(year,month) {
          let DaysHours=workDays.length*11
         let NightsHoursFact=workNights.length*11
         let NightsHoursReal=(workNights.length*4)+(workNights.length*7)*1.2
-        hours.innerHTML=`<H3>Денні години --- ${DaysHours}</H3><H3>Нічні години --- ${NightsHoursFact}<H3>Нічні години фактичні --- ${NightsHoursReal}</H3><H1>Сумарні години  --- ${DaysHours+NightsHoursFact}</H1><H1>Сумарні години фактичні --- ${DaysHours+NightsHoursReal}</H1>`
+        hours.innerHTML=`<H3>Денні години --- ${DaysHours}</H3><H3>Нічні години --- ${NightsHoursFact}<H3>Нічні зміни --- ${workNights.length}</H3><H1>Сумарні години  --- ${DaysHours+NightsHoursFact}</H1>`
         console.log('DaysHours',DaysHours)
         console.log('NightsHoursFact',NightsHoursFact)
         console.log('NightsHoursReal',NightsHoursReal)
