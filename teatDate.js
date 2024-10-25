@@ -13,6 +13,7 @@ let nowDate = new Date(),
     prev = container.getElementsByClassName('prev')[0],
     next = container.getElementsByClassName('next')[0],
     monthName = ['Січень','Лютий','Березень','Квітень','Травень','Червень','Липень','Серпень','Вересень','Жовтень','Листопад','Грудень'],
+    monthNum = ['01','02','03','04','05','06','07','08','09','10','11','12'],
     startWorkPrev={},
     startWorkNext={},
     arrayMonthDays={},
@@ -249,7 +250,7 @@ function setMonthCalendar(year,month) {
     for(i=1;i<=monthDays;i++){
         let altDate=document.createElement('div')
         let weekDay=getWeekDay(new Date(year, month,i))
-        altDate.innerHTML=`${i} `+monthName[month]+` `+year
+        altDate.innerHTML=`${i} `+monthNum[month]+` `+year
         altDate.classList.add('altDate')
         alternativeContainer.append(altDate)
         let altDay=document.createElement('div')
