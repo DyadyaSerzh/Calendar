@@ -22,6 +22,9 @@ body{
     color: #ffffff;
     list-style: none;
 }
+.date-now{
+    background-color: #b4446f;
+}
 
 .month li{
     padding: 0;
