@@ -22,9 +22,6 @@ body{
     color: #ffffff;
     list-style: none;
 }
-.date-now{
-    background-color: #b4446f;
-}
 
 .month li{
     padding: 0;
@@ -123,6 +120,7 @@ span {
 .days li.date-now{
     color: #000;
     font-weight: 700;
+    background-color: #b4446f;
 }
 .altCal {
     margin-left: auto;
